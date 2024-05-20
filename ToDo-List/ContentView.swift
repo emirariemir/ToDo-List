@@ -37,10 +37,17 @@ struct ContentView: View {
                 
                 List {
                     ForEach(items) { item in
-                        Text(item.title)
-                            .font(.headline)
-                        Text(item.subtitle)
-                            .font(.footnote)
+                        VStack (alignment: .leading, spacing: 5) {
+                            Text(item.title)
+                                .font(.headline)
+                            Text(item.subtitle)
+                                .font(.footnote)
+                        }
+                    }
+                    .onDelete { indexSet in
+                        indexSet.forEach({ index in
+                            context.delete(items[index])
+                        })
                     }
                 }
                 .overlay {
