@@ -1,4 +1,4 @@
-# ToDo List App
+![Thumbnail](SwiftData-todo.png)
 
 This repository contains a simple ToDo list application built with SwiftUI and SwiftData. The app allows users to add and delete tasks, providing a minimalistic interface for managing tasks. Below is an overview of the code and how the app works.
 
